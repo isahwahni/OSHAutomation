@@ -21,6 +21,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -241,7 +242,7 @@ public class SelectorUtil extends SelTestCase {
 						return "click";
 					}
 					else if (e.tagName().equals("p")||
-							e.tagName().equals("body") || e.tagName().equals("td")) {
+							e.tagName().equals("body") || e.tagName().equals("td") || e.tagName().contains("h")) {
 						return "gettext";
 					}else if (e.tagName().equals("div") || e.tagName().equals("span"))
 					{
@@ -366,6 +367,34 @@ public class SelectorUtil extends SelTestCase {
 	    		{
 		    		if (!SelectorUtil.isAnErrorSelector)
 		    		{
+		    			if (value.contains("ForceAction"))
+		    			{
+		    				action = value.split(",")[1];
+		    			}
+		    			
+		    			if (action.equals("hover"))
+		    			{
+		    				
+		    				Wait<WebDriver> wait = new FluentWait<WebDriver>(SelTestCase.getDriver())
+								       .withTimeout(30, TimeUnit.SECONDS)
+								       .pollingEvery(5, TimeUnit.SECONDS)
+								       .ignoring(NoSuchElementException.class);
+									   //TODO: move it to general function
+							   
+						   logs.debug("Hovering: "+ byAction.toString());
+						   
+						   JavascriptExecutor jse = (JavascriptExecutor)getDriver();
+						   jse.executeScript("arguments[0].scrollIntoView(false)", field); 
+						   Thread.sleep(200);
+						   WebElement field2 = wait.until(new Function<WebDriver, WebElement>() {
+							   public WebElement apply(WebDriver driver) {
+								   return driver.findElement(byAction);
+							   }});
+		    				
+		    				Actions HoverAction = new Actions(getDriver());
+		    				HoverAction.moveToElement(field2).click().build().perform();
+		    			}
+		    			
 					   if (action.equals("type"))
 					   {
 						  if (value.contains("getCurrentValue")) {
@@ -516,6 +545,7 @@ public class SelectorUtil extends SelTestCase {
 					   {
 						   logs.debug(MessageFormat.format(LoggingMsg.GETTING_SEL,"txt", byAction.toString()));
 						   textValue.set(field.getText());
+						   logs.debug("text is :" + textValue.get());
 					   }
 					   else if (action.equals("click,gettext"))
 					   {
@@ -529,6 +559,7 @@ public class SelectorUtil extends SelTestCase {
 						   {
 							   textVal = field.getText();
 							   textValue.set(textVal);
+							   logs.debug("text is :" + textValue.get());
 						   }catch(Exception e)
 						   {
 						   		logs.debug(MessageFormat.format(LoggingMsg.FAILED_ACTION_MSG, "get text"));
