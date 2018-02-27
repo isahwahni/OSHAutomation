@@ -1,4 +1,4 @@
-package com.generic.tests.account;
+package com.generic.tests.MyAccount_addressBook_inprogress;
 
 import static org.testng.Assert.assertNotEquals;
 

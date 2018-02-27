@@ -1,4 +1,4 @@
-package com.generic.tests.account;
+package com.generic.tests.MyAccount_Payment_inprogress;
 
 import java.text.MessageFormat;
 import java.util.Arrays;
