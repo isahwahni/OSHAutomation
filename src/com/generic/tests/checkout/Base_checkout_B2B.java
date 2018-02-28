@@ -214,14 +214,12 @@ public class Base_checkout_B2B extends SelTestCase {
 
 				if (saveBilling) {
 					CheckOut.paymentInnformation.fillAndclickNext(payment,
-							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.name),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.number),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.expireMonth),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.expireYear),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.CVCC), saveBilling,
 							billingAddress.equalsIgnoreCase(shippingAddress),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.countery),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.title),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.firstName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
@@ -230,7 +228,6 @@ public class Base_checkout_B2B extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 				} else {
 					CheckOut.paymentInnformation.fillAndclickNext(payment,
-							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.name),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.number),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.expireMonth),
 							(String) paymentDetails.get(CheckOut.paymentInnformation.keys.expireYear),

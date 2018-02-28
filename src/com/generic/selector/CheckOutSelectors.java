@@ -45,12 +45,15 @@ public class CheckOutSelectors
 	public static final String orderSubTotalShippingMethod = "test_Order_Totals_Subtotal_$";
 	
 	//Payment info
-	public static final String cardtype = "card_cardType";
-	public static final String cardHolder = "card_nameOnCard";
-	public static final String cardNumber = "card_accountNumber";
+	//done 
+	public static final String cardtype = "radioId";
+	public static final String cardNumber = "cardNumber";
 	public static final String expireDay = "ExpiryMonth";
 	public static final String expireYear = "ExpiryYear";
-	public static final String CVC = "card_cvNumber";
+	public static final String CVC = "cvvNo";
+	
+	//TODO: delete
+	public static final String cardHolder = "card_nameOnCard";
 	public static final String checkSavePayment = "savePaymentMethod";
 	public static final String checkSame = "useDeliveryAddress";
 	public static final String submitPayment = "btn btn-primary btn-block submit_silentOrderPostForm checkout-next";

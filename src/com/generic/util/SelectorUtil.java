@@ -234,7 +234,8 @@ public class SelectorUtil extends SelTestCase {
 							e.tagName().equals("a")||
 							e.tagName().equals("li") ||
 							e.tagName().equals("form")||
-							e.tagName().equals("label"))
+							e.tagName().equals("label")||
+							(e.tagName().equals("input") && (e.attr("type").equals("radio")) ))
 					{
 						return "click";
 					} else if (e.tagName().equals("input") && e.attr("type").equals("submit")) {

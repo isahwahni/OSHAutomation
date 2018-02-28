@@ -28,7 +28,7 @@ import com.generic.util.ReportUtil;
 import com.generic.util.SASLogger;
 import com.generic.util.SelectorUtil;
 
-public class AddressBookValidation extends SelTestCase {
+public class AddressBookValidationBase extends SelTestCase {
 	private static LinkedHashMap<String, Object> addresses = null;
 	private static LinkedHashMap<String, Object> users = null;
 	private String numberofaddresses;
