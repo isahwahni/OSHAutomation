@@ -238,10 +238,11 @@ public class CheckOut extends SelTestCase {
 			public static final String firstName = "firstName";
 			public static final String adddressLine = "adddressLine";
 			public static final String city = "city";
-			public static final String postal = "postal";
+			public static final String zipcode = "postal";
 			public static final String phone = "phone";
 		}
 
+		//done
 		public static void selectCountery(String countery) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -265,7 +266,8 @@ public class CheckOut extends SelTestCase {
 			SelectorUtil.initializeSelectorsAndDoActions(subStrArr, valuesArr);
 			getCurrentFunctionName(false);
 		}
-
+		
+		//done
 		public static void typeFirstName(String firstName) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -277,7 +279,8 @@ public class CheckOut extends SelTestCase {
 			getCurrentFunctionName(false);
 
 		}
-
+		
+		//done
 		public static void typeAddress(String address) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -290,6 +293,7 @@ public class CheckOut extends SelTestCase {
 
 		}
 
+		//done
 		public static void typeLastName(String lastName) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -302,6 +306,7 @@ public class CheckOut extends SelTestCase {
 
 		}
 
+		//done
 		public static void typeCity(String city) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -314,18 +319,20 @@ public class CheckOut extends SelTestCase {
 
 		}
 
-		public static void typePostalCode(String postal) throws Exception {
+		//done
+		public static void typeZipCode(String zip) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
 			List<String> valuesArr = new ArrayList<String>();
-			logs.debug(MessageFormat.format(LoggingMsg.TYPING_ELEMENT_VALUE, "postal", postal));
-			subStrArr.add(CheckOutSelectors.postal);
-			valuesArr.add(postal);
+			logs.debug(MessageFormat.format(LoggingMsg.TYPING_ELEMENT_VALUE, "postal", zip));
+			subStrArr.add(CheckOutSelectors.zipcode);
+			valuesArr.add(zip);
 			SelectorUtil.initializeSelectorsAndDoActions(subStrArr, valuesArr);
 			getCurrentFunctionName(false);
 
 		}
 
+		//done
 		public static void typePhone(String phone) throws Exception {
 			getCurrentFunctionName(true);
 			List<String> subStrArr = new ArrayList<String>();
@@ -409,7 +416,7 @@ public class CheckOut extends SelTestCase {
 				typeCity(city);
 
 			if (!"".equals(postal))
-				typePostalCode(postal);
+				typeZipCode(postal);
 
 			if (!"".equals(phone))
 				typePhone(phone);
@@ -443,7 +450,7 @@ public class CheckOut extends SelTestCase {
 				typeCity(city);
 
 			if (!"".equals(postal))
-				typePostalCode(postal);
+				typeZipCode(postal);
 
 			if (!"".equals(phone))
 				typePhone(phone);
@@ -585,6 +592,30 @@ public class CheckOut extends SelTestCase {
 			logs.debug(MessageFormat.format(LoggingMsg.ERROR_MSG, SelectorUtil.textValue.get()));
 			getCurrentFunctionName(false);
 			return SelectorUtil.textValue.get();
+		}
+		
+		//done
+		public static void typeEmailAddress(String mail) throws Exception {
+			getCurrentFunctionName(true);
+			List<String> subStrArr = new ArrayList<String>();
+			List<String> valuesArr = new ArrayList<String>();
+			subStrArr.add(CheckOutSelectors.emailAddress);
+			valuesArr.add(mail);
+			SelectorUtil.initializeSelectorsAndDoActions(subStrArr, valuesArr);
+			getCurrentFunctionName(false);
+			
+		}
+		
+		//done
+		public static void selectState(String state) throws Exception {
+			getCurrentFunctionName(true);
+			List<String> subStrArr = new ArrayList<String>();
+			List<String> valuesArr = new ArrayList<String>();
+			subStrArr.add(CheckOutSelectors.state);
+			valuesArr.add(state);
+			SelectorUtil.initializeSelectorsAndDoActions(subStrArr, valuesArr);
+			getCurrentFunctionName(false);
+			
 		}
 
 	}// shipping address
@@ -745,7 +776,7 @@ public class CheckOut extends SelTestCase {
 			if (!"".equals(city))
 				shippingAddress.typeCity(city);
 			if (!"".equals(postal))
-				shippingAddress.typePostalCode(postal);
+				shippingAddress.typeZipCode(postal);
 			if (!"".equals(phone))
 				shippingAddress.typePhone(phone);
 

@@ -243,7 +243,7 @@ public class SelectorUtil extends SelTestCase {
 						return "click";
 					}
 					else if (e.tagName().equals("p")||
-							e.tagName().equals("body") || e.tagName().equals("td") || e.tagName().contains("h")) {
+							e.tagName().equals("body") || e.tagName().equals("td") || e.tagName().contains("h")||e.tagName().contains("ul")) {
 						return "gettext";
 					}else if (e.tagName().equals("div") || e.tagName().equals("span"))
 					{

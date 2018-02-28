@@ -91,7 +91,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 			String lastName = (String) addressDetails.get(CheckOut.shippingAddress.keys.lastName);
 			String adddressLine = (String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine);
 			String city = (String) addressDetails.get(CheckOut.shippingAddress.keys.city);
-			String postal = (String) addressDetails.get(CheckOut.shippingAddress.keys.postal);
+			String postal = (String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode);
 			String phone = (String) addressDetails.get(CheckOut.shippingAddress.keys.phone);
 			
 			
@@ -118,7 +118,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -137,7 +137,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -156,7 +156,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.firstName), "",
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -176,7 +176,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.firstName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName), "",
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -195,7 +195,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.firstName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine), "",
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -236,7 +236,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-						(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+						(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 						(String) addressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 				// Shipping method
@@ -262,7 +262,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -288,7 +288,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -313,7 +313,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -338,7 +338,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -363,7 +363,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -388,7 +388,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,
@@ -413,7 +413,7 @@ public class Base_checkout_negativeCases extends SelTestCase {
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 							(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 					String globalAlertMsg = MessageFormat.format(LoggingMsg.ACTUAL_EXPECTED_ERROR,

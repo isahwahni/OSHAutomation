@@ -114,7 +114,7 @@ public class PaymentDetailsValidation extends SelTestCase {
 					(String) addressDetails.get(CheckOut.shippingAddress.keys.lastName),
 					(String) addressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 					(String) addressDetails.get(CheckOut.shippingAddress.keys.city),
-					(String) addressDetails.get(CheckOut.shippingAddress.keys.postal),
+					(String) addressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 					(String) addressDetails.get(CheckOut.shippingAddress.keys.phone), true);
 
 			// Shipping method
@@ -141,7 +141,7 @@ public class PaymentDetailsValidation extends SelTestCase {
 					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.lastName),
 					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.adddressLine),
 					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.city),
-					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.postal),
+					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.zipcode),
 					(String) billAddressDetails.get(CheckOut.shippingAddress.keys.phone));
 
 			CheckOut.reviewInformation.acceptTerms(true);
