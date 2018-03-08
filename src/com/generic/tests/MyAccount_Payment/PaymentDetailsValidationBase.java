@@ -46,7 +46,6 @@ public class PaymentDetailsValidationBase extends SelTestCase {
 		Testlogs.set(new SASLogger("paymentDetails_setup"));
 		testObject = test;
 		addresses = Common.readAddresses();
-		invintory = Common.readLocalInventory();
 		paymentCards = Common.readPaymentcards();
 		users = Common.readUsers();
 	}
@@ -94,10 +93,8 @@ public class PaymentDetailsValidationBase extends SelTestCase {
 			getDriver().get(url);
 
 			// checkout- payment
-			LinkedHashMap<String, Object> paymentDetails = (LinkedHashMap<String, Object>) paymentCards
-					.get(payment);
-			LinkedHashMap<String, Object> billAddressDetails = (LinkedHashMap<String, Object>) addresses
-					.get(billingAddress);
+			LinkedHashMap<String, Object> paymentDetails = (LinkedHashMap<String, Object>) paymentCards.get(payment);
+			LinkedHashMap<String, Object> billAddressDetails = (LinkedHashMap<String, Object>) addresses.get(billingAddress);
 
 			logs.debug(Arrays.asList(paymentDetails)+"");
 			
