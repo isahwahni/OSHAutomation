@@ -72,13 +72,20 @@ public class PaymentDetailsValidationBase extends SelTestCase {
 				this.getClass().getCanonicalName(), desc, proprties.replace("\n", "<br>- "), payment, ""));
 		
 		String url =  PagesURLs.getPaymentDetailsPage();
-		String caseMail = email;//getSubMailAccount(email);
-
+		
+		String caseMail = "";
+		LinkedHashMap<String, Object> userdetails = null; 
+		if (!email.equals(""))
+		{
+			userdetails = (LinkedHashMap<String, Object>) users.get(email);
+			caseMail = (String) userdetails.get(Registration.keys.email);
+			Testlogs.get().debug("Mail will be used is: " + caseMail);
+		}
+		
 		try {
 
 			// you need to maintain the concurrency and get the main account
 			// information and log in in browser account
-			LinkedHashMap<String, Object> userdetails = (LinkedHashMap<String, Object>) users.get(email);
 			Testlogs.get().debug(caseMail);
 			Testlogs.get().debug((String) userdetails.get(Registration.keys.password));
 			
